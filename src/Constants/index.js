@@ -21,9 +21,21 @@ const navlinks = [
   },
 ];
 const nav_icon = [
-  { title: "Linkedin", path: "/icons/linkedin.png" },
-  { title: "Twitter", path: "/icons/twitter.png" },
-  { title: "Linkedin", path: "./icons/github.png" },
+  {
+    title: "Linkedin",
+    path: "/icons/linkedin.png",
+    url: "https://www.linkedin.com/in/muhammad-abdullah-31bb38286",
+  },
+  {
+    title: "Twitter",
+    path: "/icons/twitter.png",
+    url: "https://www.twitter.com",
+  },
+  {
+    title: "Linkedin",
+    path: "./icons/github.png",
+    url: "https://github.com/Abdullah6346",
+  },
 ];
 
 export { navlinks, nav_icon };
