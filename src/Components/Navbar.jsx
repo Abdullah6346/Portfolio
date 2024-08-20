@@ -1,6 +1,6 @@
 import { navlinks } from "../Constants";
 import { nav_icon } from "../Constants";
-
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <header>
@@ -13,8 +13,11 @@ const Navbar = () => {
             <div className="cont-nav-links flex items-center gap-10">
               <div className="cont-titles flex justify-center gap-10 lg:pl-56">
                 {navlinks.map((nav) => (
-                  <li key={nav.id} className="group relative p-2 text-white">
-                    <a href={`#${nav.id}`}>{nav.title}</a>
+                  <li
+                    key={nav.id}
+                    className="group relative p-2 text-white max-lg:truncate"
+                  >
+                    <Link to={`#${nav.id}`}>{nav.title}</Link>
                     <span className="group-hover:opacity-100bg-secondary absolute -bottom-1 left-0 right-0 h-[2px] rounded-full bg-gradient-to-r from-[#13B0F5] via-purple-500 to-[#E70FAA] opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"></span>
                   </li>
                 ))}
@@ -22,9 +25,9 @@ const Navbar = () => {
               <div className="cont-icons flex gap-5">
                 {nav_icon.map((icon) => (
                   <li key={icon.title}>
-                    <a href={`${icon.url}`}>
+                    <Link to={`${icon.url}`}>
                       <img className="inline" src={icon.path} alt="" />
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </div>
