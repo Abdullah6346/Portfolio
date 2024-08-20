@@ -20,5 +20,10 @@ const navlinks = [
     title: "Contact",
   },
 ];
+const icon_svgs = [
+  { title: "Linkedin", path: "/assests/svg/linkedin" },
+  { title: "Twitter", path: "./assests/svg/twitter" },
+  { title: "Linkedin", path: "./assests/svg/vector" },
+];
 
-export { navlinks };
+export { navlinks, icon_svgs };
