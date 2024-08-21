@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 const Navbar = () => {
   const [isOpenMenu, setisOpenMenu] = useState(false);
-  const [isActive, setisActive] = useState(
-    window.matchMedia("(max-width: 600px)").matches,
-  );
   const toogleMenu = () => {
     setisOpenMenu(!isOpenMenu);
   };
+  const [isActive, setisActive] = useState(
+    window.matchMedia("(max-width: 600px)").matches,
+  );
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 600px)");
@@ -32,7 +32,7 @@ const Navbar = () => {
             isOpenMenu
               ? "flex items-baseline bg-[#2e2e2e]"
               : "map_cont flex items-center"
-          } justify-center px-4 py-6 text-[18px] leading-7 max-sm:text-[10px]`}
+          } justify-center px-4 py-6 text-[18px] leading-7`}
         >
           <ul
             className={
@@ -43,14 +43,14 @@ const Navbar = () => {
               <ul
                 className={
                   isOpenMenu
-                    ? "open-menu nav-links-con-2 flex flex-col items-center justify-center"
+                    ? "open-menu nav-links-con-2 flex flex-col items-start justify-center"
                     : "hidden"
                 }
               >
                 {navlinks.map((nav) => (
                   <li
                     key={nav.id}
-                    className="group relative cursor-pointer p-2 text-white max-lg:truncate"
+                    className="group relative cursor-pointer p-2 text-white active:bg-gradient-to-r active:from-[#13B0F5] active:via-purple-500 active:to-[#E70FAA] max-lg:truncate"
                   >
                     <Link to={`#${nav.id}`} className="relative z-10">
                       {nav.title}
@@ -63,7 +63,7 @@ const Navbar = () => {
             <div className={!isOpenMenu ? "cont-logp" : "hidden"}>
               <img src="/icons/logo.png" alt="" />
             </div>
-            <div className="cont-nav-links flex items-center gap-10">
+            <div className="cont-nav-links laptop:text-[13px] flex items-center gap-10">
               <div
                 className={
                   !isActive
@@ -92,9 +92,13 @@ const Navbar = () => {
               </button>
             </div>
 
-            <div className={!isActive ? "cont-icons flex gap-5" : "hidden"}>
+            <div
+              className={
+                !isActive ? "cont-icons laptop:hidden flex gap-5" : "hidden"
+              }
+            >
               {nav_icon.map((icon) => (
-                <li key={icon.title}>
+                <li className="laptop:hidden" key={icon.title}>
                   <Link to={`${icon.url}`}>
                     <img className="inline" src={icon.path} alt="" />
                   </Link>

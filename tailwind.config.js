@@ -2,6 +2,9 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    screens: {
+      laptop: { max: "768px" },
+    },
     extend: {},
   },
   plugins: [],
