@@ -27,9 +27,40 @@ const Navbar = () => {
   return (
     <header>
       <nav>
-        <div className="map_cont flex items-center justify-center px-4 py-6 text-[18px] leading-7 max-sm:text-[10px]">
-          <ul className="flex items-center space-x-4">
-            <div className="cont-logp">
+        <div
+          className={`${
+            isOpenMenu
+              ? "flex items-baseline bg-[#2e2e2e]"
+              : "map_cont flex items-center"
+          } justify-center px-4 py-6 text-[18px] leading-7 max-sm:text-[10px]`}
+        >
+          <ul
+            className={
+              isOpenMenu ? "flex items-baseline" : "flex items-center space-x-4"
+            }
+          >
+            <div className="cont-open-menu flex justify-center text-left text-[15px]">
+              <ul
+                className={
+                  isOpenMenu
+                    ? "open-menu nav-links-con-2 flex flex-col items-center justify-center"
+                    : "hidden"
+                }
+              >
+                {navlinks.map((nav) => (
+                  <li
+                    key={nav.id}
+                    className="group relative cursor-pointer p-2 text-white max-lg:truncate"
+                  >
+                    <Link to={`#${nav.id}`} className="relative z-10">
+                      {nav.title}
+                    </Link>
+                    <span className="absolute bottom-0 left-0 right-0 h-[2px] rounded-full bg-gradient-to-r from-[#13B0F5] via-purple-500 to-[#E70FAA] opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"></span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className={!isOpenMenu ? "cont-logp" : "hidden"}>
               <img src="/icons/logo.png" alt="" />
             </div>
             <div className="cont-nav-links flex items-center gap-10">
@@ -57,24 +88,8 @@ const Navbar = () => {
               }
             >
               <button onClick={toogleMenu}>
-                <img src="/icons/burger-menu.png" alt="" />{" "}
+                <img src="/icons/burger-menu3.png" alt="" />{" "}
               </button>
-
-              <ul
-                className={
-                  isOpenMenu ? "open nav-links-con-2 flex flex-col" : "hidden"
-                }
-              >
-                {navlinks.map((nav) => (
-                  <li
-                    key={nav.id}
-                    className="group relative p-2 text-white max-lg:truncate"
-                  >
-                    <Link to={`#${nav.id}`}>{nav.title}</Link>
-                    <span className="group-hover:opacity-100bg-secondary absolute -bottom-1 left-0 right-0 h-[2px] rounded-full bg-gradient-to-r from-[#13B0F5] via-purple-500 to-[#E70FAA] opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"></span>
-                  </li>
-                ))}
-              </ul>
             </div>
 
             <div className={!isActive ? "cont-icons flex gap-5" : "hidden"}>
