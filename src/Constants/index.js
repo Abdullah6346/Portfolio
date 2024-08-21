@@ -32,7 +32,7 @@ const nav_icon = [
     url: "https://www.twitter.com",
   },
   {
-    title: "Linkedin",
+    title: "Github",
     path: "./icons/github.png",
     url: "https://github.com/Abdullah6346",
   },
