@@ -4,6 +4,7 @@ export default {
   theme: {
     screens: {
       laptop: { max: "768px" },
+      slaptop: "768px",
       desktop: "1042px",
       ldesktop: "1520px",
       xldesktop: "1820px",
