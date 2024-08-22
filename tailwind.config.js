@@ -4,8 +4,15 @@ export default {
   theme: {
     screens: {
       laptop: { max: "768px" },
+      desktop: "1042px",
+      ldesktop: "1520px",
+      xldesktop: "1820px",
     },
-    extend: {},
+    extend: {
+      backgroundColor: {
+        customgradient: "linear-gradient(to right  , #13b0f5 3%, #e70faa 100%)",
+      },
+    },
   },
   plugins: [],
 };

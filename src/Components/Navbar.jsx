@@ -50,7 +50,7 @@ const Navbar = () => {
                 {navlinks.map((nav) => (
                   <li
                     key={nav.id}
-                    className="group relative cursor-pointer p-2 text-white active:bg-gradient-to-r active:from-[#13B0F5] active:via-purple-500 active:to-[#E70FAA] max-lg:truncate"
+                    className="max-lg:truncate group relative cursor-pointer p-2 text-white active:bg-gradient-to-r active:from-[#13B0F5] active:via-purple-500 active:to-[#E70FAA]"
                   >
                     <Link to={`#${nav.id}`} className="relative z-10">
                       {nav.title}
@@ -63,18 +63,18 @@ const Navbar = () => {
             <div className={!isOpenMenu ? "cont-logp" : "hidden"}>
               <img src="/icons/logo.png" alt="" />
             </div>
-            <div className="cont-nav-links laptop:text-[13px] flex items-center gap-10">
+            <div className="cont-nav-links flex items-center gap-10 laptop:text-[13px]">
               <div
                 className={
                   !isActive
-                    ? "cont-titles flex justify-center gap-10 lg:pl-56"
+                    ? "cont-titles flex justify-center gap-10 desktop:pl-64 ldesktop:pl-80 xldesktop:pl-[32rem]"
                     : "hidden"
                 }
               >
                 {navlinks.map((nav) => (
                   <li
                     key={nav.id}
-                    className="group relative p-2 text-white max-lg:truncate"
+                    className="max-lg:truncate group relative p-2 text-white"
                   >
                     <Link to={`#${nav.id}`}>{nav.title}</Link>
                     <span className="group-hover:opacity-100bg-secondary absolute -bottom-1 left-0 right-0 h-[2px] rounded-full bg-gradient-to-r from-[#13B0F5] via-purple-500 to-[#E70FAA] opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"></span>
@@ -88,13 +88,13 @@ const Navbar = () => {
               }
             >
               <button onClick={toogleMenu}>
-                <img src="/icons/burger-menu3.png" alt="" />{" "}
+                <img src="/icons/burger-menu.png" alt="" />{" "}
               </button>
             </div>
 
             <div
               className={
-                !isActive ? "cont-icons laptop:hidden flex gap-5" : "hidden"
+                !isActive ? "cont-icons flex gap-5 laptop:hidden" : "hidden"
               }
             >
               {nav_icon.map((icon) => (

@@ -5,3 +5,38 @@
   background-color: #191919;
   font-family: "DM Sans", sans-serif;
 }
+* {
+  font-family: "DM Sans", sans-serif;
+}
+/* Add this to your main CSS file or inside a <style> tag */
+.text-gradient {
+  background: linear-gradient(to right, #13b0f5 3%, #e70faa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #13b0f5 3%, #e70faa 100%);
+  background-size: 200% 200%;
+  animation: rainbow 2s ease-in-out infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: white;
+  display: block;
+  text-align: center;
+  transition: color 0.2s ease-in-out;
+}
+.gradient-text:hover {
+  color: rgba(0, 0, 0, 0);
+}
+@keyframes rainbow {
+  0% {
+    background-position: center;
+  }
+  50% {
+    background-position: center;
+  }
+  100% {
+    background-position: left;
+  }
+}
