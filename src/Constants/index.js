@@ -42,74 +42,103 @@ const nav_icon = [
 const technologies = [
   {
     name: "HTML 5",
-    icon: "https://rajesh-mern-stack-portfolio-images.s3.ap-south-1.amazonaws.com/assets/tech/html.png",
+    icon: "/techicons/html.png",
   },
   {
     name: "CSS 3",
-    icon: "https://rajesh-mern-stack-portfolio-images.s3.ap-south-1.amazonaws.com/assets/tech/css.png",
+    icon: "/techicons/css.png",
   },
   {
     name: "JavaScript",
-    icon: "https://rajesh-mern-stack-portfolio-images.s3.ap-south-1.amazonaws.com/assets/tech/javascript.png",
+    icon: "./techicons/js.png",
   },
   {
     name: "Tailwind CSS",
-    icon: "https://rajesh-mern-stack-portfolio-images.s3.ap-south-1.amazonaws.com/assets/tech/tailwind.png",
+    icon: "/techicons/tailwind.png",
   },
   {
     name: "React JS",
-    icon: "https://rajesh-mern-stack-portfolio-images.s3.ap-south-1.amazonaws.com/assets/tech/reactjs.png",
+    icon: "/techicons/react.png",
   },
   {
     name: "Redux",
-    icon: "https://rajesh-mern-stack-portfolio-images.s3.ap-south-1.amazonaws.com/assets/tech/redux.png",
+    icon: "/techicons/redux.png",
   },
   {
     name: "Formik",
-    icon: "https://rajesh-mern-stack-portfolio-images.s3.ap-south-1.amazonaws.com/assets/tech/formik-icon.png",
+    icon: "/techicons/formik.png",
   },
   {
     name: "Matirial UI",
-    icon: "https://rajesh-mern-stack-portfolio-images.s3.ap-south-1.amazonaws.com/assets/tech/material-ui.png",
+    icon: "/techicons/material.png",
   },
 
   {
     name: "Scss",
-    icon: "https://rajesh-mern-stack-portfolio-images.s3.ap-south-1.amazonaws.com/assets/tech/scss.png",
+    icon: "/techicons/sass.png",
   },
   {
     name: "Node JS",
-    icon: "https://rajesh-mern-stack-portfolio-images.s3.ap-south-1.amazonaws.com/assets/tech/nodejs.png",
+    icon: "/techicons/nodejs.png",
   },
   {
     name: "Express JS",
-    icon: "https://rajesh-mern-stack-portfolio-images.s3.ap-south-1.amazonaws.com/assets/tech/expressjs.png",
+    icon: "/techicons/expressjs.png",
   },
   {
     name: "MongoDB",
-    icon: "https://rajesh-mern-stack-portfolio-images.s3.ap-south-1.amazonaws.com/assets/tech/mongodb.png",
+    icon: "/techicons/mongodb.png",
   },
   {
     name: "Mongoose",
-    icon: "https://rajesh-mern-stack-portfolio-images.s3.ap-south-1.amazonaws.com/assets/tech/mongoose.png",
+    icon: "/techicons/mongoose.png",
   },
   {
     name: "Git",
-    icon: "https://rajesh-mern-stack-portfolio-images.s3.ap-south-1.amazonaws.com/assets/tech/git.png",
+    icon: "/techicons/git.png",
   },
   {
     name: "GitHup",
-    icon: "https://rajesh-mern-stack-portfolio-images.s3.ap-south-1.amazonaws.com/assets/github.png",
+    icon: "/techicons/github.png",
+  },
+  // {
+  //   name: "EC2",
+  //   icon: "https://rajesh-mern-stack-portfolio-images.s3.ap-south-1.amazonaws.com/assets/tech/ec2.png",
+  // },
+  // {
+  //   name: "S3",
+  //   icon: "https://rajesh-mern-stack-portfolio-images.s3.ap-south-1.amazonaws.com/assets/tech/Amazon-S3.png",
+  // },
+];
+const tools = [
+  {
+    name: "VS Code",
+    icon: "https://rajesh-mern-stack-portfolio-images.s3.ap-south-1.amazonaws.com/assets/tools/vscode.png",
   },
   {
-    name: "EC2",
-    icon: "https://rajesh-mern-stack-portfolio-images.s3.ap-south-1.amazonaws.com/assets/tech/ec2.png",
+    name: "ChatGPT",
+    icon: "https://rajesh-mern-stack-portfolio-images.s3.ap-south-1.amazonaws.com/assets/tools/ChatGPT.png",
   },
   {
-    name: "S3",
-    icon: "https://rajesh-mern-stack-portfolio-images.s3.ap-south-1.amazonaws.com/assets/tech/Amazon-S3.png",
+    name: "Chrome",
+    icon: "https://rajesh-mern-stack-portfolio-images.s3.ap-south-1.amazonaws.com/assets/tools/chrome.png",
+  },
+  {
+    name: "Impress",
+    icon: "https://rajesh-mern-stack-portfolio-images.s3.ap-south-1.amazonaws.com/assets/tools/Impress.png",
+  },
+  {
+    name: "Mongodb Compass",
+    icon: "https://rajesh-mern-stack-portfolio-images.s3.ap-south-1.amazonaws.com/assets/tools/mongodbCompass.png",
+  },
+  {
+    name: "Postman",
+    icon: "https://rajesh-mern-stack-portfolio-images.s3.ap-south-1.amazonaws.com/assets/tools/postman.png",
+  },
+  {
+    name: "Ubuntu",
+    icon: "https://rajesh-mern-stack-portfolio-images.s3.ap-south-1.amazonaws.com/assets/tools/ubuntu.png",
   },
 ];
 
-
-export { navlinks, nav_icon, technologies };
+export { navlinks, nav_icon, technologies, tools };
