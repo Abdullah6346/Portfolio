@@ -5,10 +5,13 @@
 
 :root {
   background-color: #191919;
-  font-family: "DM Sans", sans-serif;
 }
+
 * {
+  scrollbar-width: none;
+  /* overflow-x: hidden; */
   font-family: "DM Sans", sans-serif;
+  box-sizing: border-box;
 }
 /* Add this to your main CSS file or inside a <style> tag */
 .text-gradient {
@@ -45,4 +48,8 @@
 .sect-techstack {
   font-family: "Poppins", sans-serif;
 }
-
+.inner-hero-text,
+.inner-name-cont,
+.inner-hero {
+  transform: none !important; /* Override any unwanted transforms */
+}

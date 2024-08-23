@@ -67,7 +67,7 @@ const Navbar = () => {
               <div
                 className={
                   !isActive
-                    ? "cont-titles flex justify-center gap-10 desktop:pl-64 ldesktop:pl-80 xldesktop:pl-[32rem]"
+                    ? "cont-titles flex justify-center gap-10 desktop:pl-80 ldesktop:pl-80 xldesktop:pl-[32rem]"
                     : "hidden"
                 }
               >
